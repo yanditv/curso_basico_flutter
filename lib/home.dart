@@ -1,13 +1,21 @@
 import 'package:curso_basico_flutter/dashboard.dart';
+import 'package:curso_basico_flutter/estado.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
 
-  void _onPressed(BuildContext context) {
+  void _onPressedDashboard(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (context) {
         return const Dashboard();
+      },
+    ));
+  }
+  void _onPressedEstados(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) {
+        return const PaginaConEstado();
       },
     ));
   }
@@ -18,7 +26,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: GestureDetector(
           onTap: () {
-            _onPressed(context);
+            _onPressedDashboard(context);
           },
           child: const Center(
               child: Text(
@@ -44,7 +52,7 @@ class Home extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  _onPressed(context);
+                  _onPressedDashboard(context);
                 },
                 child: Container(
                     width: 250.0,
@@ -73,23 +81,23 @@ class Home extends StatelessWidget {
                 children: [
                   MaterialButton(
                     onPressed: () {
-                      _onPressed(context);
+                      _onPressedDashboard(context);
                     },
-                    child: const Text("Iniciar sesión"),
+                    child: const Text("Dahsboard"),
                     color: Colors.amber,
                   ),
                   const SizedBox(width: 10.0),
                   MaterialButton(
                     onPressed: () {
-                      _onPressed(context);
+                      _onPressedEstados(context);
                     },
-                    child: const Text("Cerrar sesión"),
+                    child: const Text("Estados"),
                     color: Colors.amber,
                   ),
                   const SizedBox(width: 10.0),
                   MaterialButton(
                     onPressed: () {
-                      _onPressed(context);
+                      _onPressedDashboard(context);
                     },
                     child: const Text("Cerrar sesión"),
                     color: Colors.amber,
