@@ -1,5 +1,5 @@
 import 'package:curso_basico_flutter/dashboard.dart';
-import 'package:curso_basico_flutter/estado.dart';
+import 'package:curso_basico_flutter/pagina_con_estado.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
