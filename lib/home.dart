@@ -42,17 +42,23 @@ class Home extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                  width: 250.0,
-                  margin: const EdgeInsets.only(bottom: 50.0),
-                  child: const Center(
-                    child: Text("Hola mundo",
-                        style: TextStyle(color: Colors.white, fontSize: 28.0)),
-                  ),
-                  decoration: const BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  )),
+              GestureDetector(
+                onTap: () {
+                  _onPressed(context);
+                },
+                child: Container(
+                    width: 250.0,
+                    margin: const EdgeInsets.only(bottom: 50.0),
+                    child: const Center(
+                      child: Text("Hola mundo",
+                          style:
+                              TextStyle(color: Colors.white, fontSize: 28.0)),
+                    ),
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    )),
+              ),
               const Padding(
                 padding: EdgeInsets.only(bottom: 20.0),
                 child: Text(
@@ -66,7 +72,7 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   MaterialButton(
-                    onPressed: (){
+                    onPressed: () {
                       _onPressed(context);
                     },
                     child: const Text("Iniciar sesión"),
