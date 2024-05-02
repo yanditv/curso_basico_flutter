@@ -1,3 +1,4 @@
+import 'package:curso_basico_flutter/background.dart';
 import 'package:curso_basico_flutter/dashboard.dart';
 import 'package:curso_basico_flutter/pagina_con_estado.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,14 @@ class Home extends StatelessWidget {
       },
     ));
   }
+  void _onPressedBackground(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) {
+        return const BackgroundPage();
+      },
+    ));
+  }
+
   void _onPressedEstados(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (context) {
@@ -97,9 +106,9 @@ class Home extends StatelessWidget {
                   const SizedBox(width: 10.0),
                   MaterialButton(
                     onPressed: () {
-                      _onPressedDashboard(context);
+                     _onPressedBackground(context);
                     },
-                    child: const Text("Cerrar sesión"),
+                    child: const Text("Background"),
                     color: Colors.amber,
                   ),
                 ],
