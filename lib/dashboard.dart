@@ -1,4 +1,6 @@
+import 'package:curso_basico_flutter/widget/pastel_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -107,10 +109,61 @@ class Dashboard extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
-            child: Text("Resumen Septiembre 2022",style: TextStyle(color: Colors.grey),),
+          const Padding(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+            child: Text(
+              "Resumen Septiembre 2022",
+              style: TextStyle(color: Colors.grey),
+            ),
           ),
+          PastelChart(
+              saldoMesActual: 2.5,
+              regarcaMesActual: 5.6,
+              pasajemesActual: 10.5,
+              saldoMesAnterior: 2.5),
+          const Padding(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+            child: Text(
+              "Resumen Septiembre 2022",
+              style: TextStyle(color: Colors.grey),
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.bus_alert),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Parada Favorita"),
+                          Text("Mi parada Favorita")
+                        ],
+                      )
+                    ],
+                  ),
+                  Text("33")
+                ],
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+               LinearPercentIndicator(
+                percent: 0.5,
+                lineHeight: 15.0,
+                progressColor: Colors.redAccent,
+                backgroundColor: Colors.grey[400],
+                barRadius: const Radius.circular(16),
+              )
+            ],
+          )
         ]),
       ),
     );

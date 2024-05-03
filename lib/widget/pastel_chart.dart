@@ -1,8 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'indicator.dart';
-
+import 'package:curso_basico_flutter/widget/indicator.dart';
 // ignore: must_be_immutable
 class PastelChart extends StatefulWidget {
   late double saldoMesActual,
