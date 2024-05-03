@@ -7,6 +7,9 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     var ancho = MediaQuery.of(context).size.width;
     var alto = MediaQuery.of(context).size.height;
+    TextStyle style_titles = TextStyle(
+        color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold);
+
     return Scaffold(
       appBar: AppBar(
         title: const Center(
@@ -43,17 +46,17 @@ class Dashboard extends StatelessWidget {
             height: 200,
             child: Row(
               children: [
-                Container(
-                  width: 50,
-                  height: 250,
-                  color: Colors.amber,
-                ),
-                const Column(
+                Image.network(
+                  "https://www.w3schools.com/w3images/avatar2.png",
+                  width: 100,
+                  height: 100,),
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "Junior Wachapa",
+                      style: style_titles,
                       textAlign: TextAlign.left,
                     ),
                     Row(
@@ -61,10 +64,26 @@ class Dashboard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Icon(Icons.card_giftcard),
-                        Text("090931231231231"),
-                        Text("12.50"),
+                        Text(
+                          "SI=H-00054157624",
+                          style: style_titles,
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Text(
+                          "12.50",
+                          style: style_titles,
+                        ),
                       ],
-                    )
+                    ),
+                    Text(
+                      "Ver perfil",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                      ),
+                    ),
                   ],
                 )
               ],
