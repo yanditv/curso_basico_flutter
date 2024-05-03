@@ -221,7 +221,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
               color: HexColor("#99CC00")),
-          child: Row(
+          child: const Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
