@@ -36,7 +36,7 @@ class Dashboard extends StatelessWidget {
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Stack(
             alignment: const Alignment(-1.0, 0.1),
             children: [
@@ -50,46 +50,50 @@ class Dashboard extends StatelessWidget {
                 height: 150,
                 child: Row(
                   children: [
-                    Padding(padding: const EdgeInsets.only(left: 50.0),child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Junior Wachapa",
-                          style: style_titles,
-                          textAlign: TextAlign.left,
-                        ),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Icon(Icons.card_giftcard),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              "SI=H-00054157624",
-                              style: style_titles,
-                            ),
-                            SizedBox(
-                              width: 25,
-                            ),
-                            Text(
-                              "12.50",
-                              style: style_titles,
-                            ),
-                          ],
-                        ),
-                        const Text(
-                          "Ver perfil",
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 18,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 50.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Junior Wachapa",
+                            style: style_titles,
+                            textAlign: TextAlign.left,
                           ),
-                        ),
-                      ],
-                    ),),
-                    
+                          Row(
+                            children: [
+                              const Icon(Icons.card_giftcard),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    "SI=H-00054157624",
+                                    style: style_titles,
+                                  ),
+                                  SizedBox(
+                                    width: 50,
+                                  ),
+                                  Text(
+                                    "12.50",
+                                    style: style_titles,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const Text(
+                            "Ver perfil",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -102,7 +106,11 @@ class Dashboard extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, bottom: 10.0),
+            child: Text("Resumen Septiembre 2022",style: TextStyle(color: Colors.grey),),
+          ),
         ]),
       ),
     );
