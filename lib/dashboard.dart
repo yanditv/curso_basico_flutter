@@ -8,7 +8,7 @@ class Dashboard extends StatelessWidget {
     var ancho = MediaQuery.of(context).size.width;
     var alto = MediaQuery.of(context).size.height;
     TextStyle style_titles = TextStyle(
-        color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold);
+        color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold);
 
     return Scaffold(
       appBar: AppBar(
@@ -46,10 +46,18 @@ class Dashboard extends StatelessWidget {
             height: 200,
             child: Row(
               children: [
-                Image.network(
-                  "https://www.w3schools.com/w3images/avatar2.png",
-                  width: 100,
-                  height: 100,),
+                // Image.network(
+                //   "https://www.w3schools.com/w3images/avatar2.png",
+                //   width: 100,
+                //   height: 100,)
+                Container(
+                  width: 75,
+                  height: 75,
+                  child: const CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://www.w3schools.com/w3images/avatar2.png"),
+                  ),
+                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -63,7 +71,10 @@ class Dashboard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(Icons.card_giftcard),
+                        const Icon(Icons.card_giftcard),
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Text(
                           "SI=H-00054157624",
                           style: style_titles,
@@ -77,7 +88,7 @@ class Dashboard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       "Ver perfil",
                       style: TextStyle(
                         color: Colors.black,
