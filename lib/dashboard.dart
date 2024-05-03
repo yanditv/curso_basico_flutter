@@ -1,6 +1,8 @@
 import 'package:curso_basico_flutter/widget/pastel_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
@@ -14,11 +16,10 @@ class Dashboard extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-            child: Text(
-          "Mi perfil",
-          style: TextStyle(color: Colors.grey, fontSize: 18),
-        )),
+        title: Center(
+            child: Text("Mi perfil",
+                style:
+                    GoogleFonts.poppins(color: Colors.black, fontSize: 20.0))),
         actions: [
           GestureDetector(
             onTap: () {},
@@ -45,7 +46,7 @@ class Dashboard extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(left: 30),
                 decoration: BoxDecoration(
-                  color: Colors.redAccent,
+                  color: HexColor("#FF0000"),
                   borderRadius: BorderRadius.circular(25),
                 ),
                 width: ancho,
@@ -60,7 +61,10 @@ class Dashboard extends StatelessWidget {
                         children: [
                           Text(
                             "Junior Wachapa",
-                            style: style_titles,
+                            style: GoogleFonts.poppins(
+                              color: Colors.white,
+                              fontSize: 20
+                            ),
                             textAlign: TextAlign.left,
                           ),
                           Row(
@@ -155,7 +159,7 @@ class Dashboard extends StatelessWidget {
               const SizedBox(
                 height: 10.0,
               ),
-               LinearPercentIndicator(
+              LinearPercentIndicator(
                 percent: 0.5,
                 lineHeight: 15.0,
                 progressColor: Colors.redAccent,

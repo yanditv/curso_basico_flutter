@@ -38,6 +38,8 @@ dependencies:
   fl_chart: ^0.55.2
   intl: ^0.18.0
   percent_indicator: ^4.2.3
+  hexcolor: ^3.0.1
+  google_fonts: ^5.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
