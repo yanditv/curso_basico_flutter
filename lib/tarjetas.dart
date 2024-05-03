@@ -197,7 +197,7 @@ class _TarjetasPageState extends State<TarjetasPage> {
                   color: HexColor("#FF0000"),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Center(
+                child: const Center(
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
